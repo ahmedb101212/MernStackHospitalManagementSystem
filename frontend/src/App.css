@@ -1,120 +1,170 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
+  /* Changed to Orbitron for cyber-futuristic feel */
 }
+
 body {
-  background: #ffffffff;
+  background: #0d0d1a;
+  color: #e0e0ff;
 }
+
 .btn {
   padding: 7px 20px;
   border-radius: 12px;
   border: none;
   font-weight: bold;
   letter-spacing: 2px;
+  transition: all 0.3s ease;
 }
+
 .white-btn {
-  background: #fff;
-  color: #111;
+  background: #1a1a3a;
+  color: #a0d0ff;
+  border: 1px solid #5a7fff;
+  box-shadow: 0 0 15px rgba(90, 127, 255, 0.5);
 }
+
+.white-btn:hover {
+  background: #2a2a5a;
+  box-shadow: 0 0 25px rgba(90, 127, 255, 0.8);
+}
+
 .purple-btn {
-  background: #9083d5;
-  color: #fff;
+  background: linear-gradient(135deg, #7b5eff, #00d4ff);
+  color: #0d0d1a;
+  box-shadow: 0 0 20px rgba(123, 94, 255, 0.7);
 }
+
+.purple-btn:hover {
+  box-shadow: 0 0 30px rgba(123, 94, 255, 1);
+  transform: translateY(-2px);
+}
+
 p,
 span,
 a {
   font-size: 20px;
+  color: #d0d0ff;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #00eaff;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.6);
+}
+
 h1 {
   font-size: 36px;
   font-weight: 900;
 }
-h1 {
-  font-size: 36px;
-  font-weight: 900;
-}
+
 h2 {
   font-size: 32px;
   font-weight: 900;
 }
+
 h3 {
   font-size: 28px;
   font-weight: 900;
 }
+
 h4 {
   font-size: 24px;
   font-weight: 900;
 }
+
 h5,
 h6 {
   font-size: 24px;
   font-weight: 700;
 }
+
 @media (max-width: 1186px) {
   h1 {
     font-size: 32px;
-    font-weight: 900;
   }
   h2 {
     font-size: 30px;
-    font-weight: 900;
   }
 }
+
 .container {
   padding: 0 100px;
 }
+
 @media (max-width: 700px) {
   .container {
     padding: 0 20px;
   }
 }
+
 .hero {
   display: flex;
   gap: 50px;
   padding-top: 120px;
   padding-bottom: 120px;
   position: relative;
+  background: linear-gradient(180deg, #0a0a1f 0%, #000814 100%);
 }
+
 .hero .banner {
   flex: 1;
 }
+
 .hero .banner h1,
 .hero .banner p {
   max-width: 650px;
 }
+
 .hero .banner h1 {
-  letter-spacing: 2px;
-  word-spacing: 5px;
+  letter-spacing: 4px;
+  word-spacing: 8px;
   font-size: 40px;
+  text-shadow: 0 0 20px #00d4ff;
 }
+
 .hero .banner p {
-  color: #111;
+  color: #b0c0ff;
   letter-spacing: 2px;
 }
+
 .hero .banner span {
   position: absolute;
   right: -300px;
   top: -200px;
   z-index: -1;
+  color: rgba(0, 212, 255, 0.15);
+  font-size: 300px;
+  font-weight: 900;
 }
+
 .hero .banner:first-child {
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: 50px;
 }
+
 .hero .banner:last-child {
   display: flex;
   justify-content: center;
   align-items: center;
   overflow-y: hidden;
 }
+
 .animated-image {
-  animation: moveUpDown 1s infinite alternate ease-in-out;
+  animation: moveUpDown 1.5s infinite alternate ease-in-out;
+  filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.7));
 }
 
 @keyframes moveUpDown {
@@ -125,6 +175,7 @@ h6 {
     transform: translateY(20px);
   }
 }
+
 @media (max-width: 1186px) {
   .hero .banner span {
     right: -400px;
@@ -133,50 +184,62 @@ h6 {
     font-size: 32px;
   }
 }
+
 @media (max-width: 1085px) {
   .hero .banner span {
     right: -480px;
     top: -315px;
   }
 }
+
 @media (max-width: 925px) {
   .hero {
     flex-direction: column;
   }
-  @media (max-width: 700px) {
-    .hero {
-      padding-bottom: 40px;
-    }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding-bottom: 40px;
   }
 }
+
 .form-component {
   padding-top: 40px;
   padding-bottom: 60px;
+  background: #0a0a1f;
 }
+
 .form-component h2 {
-  color: gray;
+  color: #00eaff;
   letter-spacing: 4px;
   margin-bottom: 30px;
+  text-shadow: 0 0 15px rgba(0, 212, 255, 0.7);
 }
+
 .form-component h4 {
-  color: gray;
+  color: #a0d0ff;
   font-weight: 700;
   margin-bottom: 20px;
 }
+
 .form-component p {
   max-width: 750px;
-  color: gray;
+  color: #b0c0ff;
   margin-bottom: 20px;
 }
+
 .form-component form {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
+
 .form-component form div {
   display: flex;
   gap: 30px;
 }
+
 .form-component form input,
 .form-component form select,
 .form-component form textarea {
@@ -184,49 +247,75 @@ h6 {
   font-size: 24px;
   padding: 10px 10px 10px 40px;
   border-radius: 7px;
-  border: 1px solid gray;
+  border: 1px solid #5a7fff;
+  background: #111122;
+  color: #e0e0ff;
+  box-shadow: inset 0 0 10px rgba(90, 127, 255, 0.3);
 }
+
+.form-component form input:focus,
+.form-component form select:focus,
+.form-component form textarea:focus {
+  outline: none;
+  border-color: #00d4ff;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.6);
+}
+
 .form-component button {
   padding: 10px 35px;
-  color: #fff;
+  color: #0d0d1a;
   font-weight: 700;
   width: fit-content;
   border: none;
   border-radius: 8px;
   font-size: 24px;
   margin-bottom: 30px;
-  background: linear-gradient(140deg, #9083d5, #271776ca);
+  background: linear-gradient(140deg, #7b5eff, #00d4ff);
+  box-shadow: 0 0 25px rgba(123, 94, 255, 0.7);
 }
+
+.form-component button:hover {
+  box-shadow: 0 0 35px rgba(123, 94, 255, 1);
+  transform: translateY(-2px);
+}
+
 .form-component .wrapper {
   display: flex;
   gap: 50px;
 }
+
 .form-component .wrapper .banner {
   flex: 1;
 }
+
 .form-component .wrapper .banner:last-child {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .form-component .wrapper .banner:last-child img {
   max-width: 450px;
+  filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.6));
 }
+
 .login-form {
   margin: 100px auto 20px auto;
   max-width: 800px;
   text-align: center;
 }
+
 .register-form {
   max-width: 1200px;
   margin: 100px auto 20px auto;
 }
-.login-form h2 {
-  color: #000;
-}
+
+.login-form h2,
 .register-form h2 {
-  color: #000;
+  color: #00eaff;
+  text-shadow: 0 0 15px rgba(0, 212, 255, 0.7);
 }
+
 @media (max-width: 1110px) {
   .appointment-form form div:nth-child(4) {
     flex-direction: column;
@@ -235,6 +324,7 @@ h6 {
     flex-direction: column;
   }
 }
+
 @media (max-width: 888px) {
   .form-component {
     padding-top: 30px;
@@ -244,6 +334,7 @@ h6 {
     flex-direction: column;
   }
 }
+
 @media (max-width: 667px) {
   .form-component form input,
   .form-component form select,
@@ -252,52 +343,67 @@ h6 {
     padding: 10px;
   }
 }
+
 .biography {
   display: flex;
   gap: 50px;
   padding-top: 40px;
   padding-bottom: 60px;
+  background: #0a0a1f;
 }
+
 .biography .banner:first-child {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .biography .banner:last-child {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 .biography .banner h3 {
   font-weight: 700;
   letter-spacing: 3px;
+  color: #00eaff;
 }
+
 .biography .banner p:first-child {
   font-size: 24px;
   letter-spacing: 2px;
+  color: #d0d0ff;
 }
+
 @media (max-width: 925px) {
   .biography {
     flex-direction: column-reverse;
   }
 }
+
 .message-form {
   position: relative;
 }
+
 .message-form h2 {
   text-align: center;
-  color: #000;
+  color: #00eaff;
   position: relative;
+  text-shadow: 0 0 15px rgba(0, 212, 255, 0.7);
 }
+
 .message-form img {
   position: absolute;
   top: 0;
   right: -16%;
   height: 600px;
   z-index: -1;
+  filter: brightness(1.2) drop-shadow(0 0 20px rgba(0, 212, 255, 0.5));
 }
+
 @media (max-width: 700px) {
   .message-form img {
     right: -35%;
@@ -305,42 +411,59 @@ h6 {
     top: 10%;
   }
 }
+
 footer {
   padding-bottom: 30px !important;
+  background: #000814;
+  border-top: 1px solid #5a7fff;
 }
+
 footer hr {
   margin-bottom: 30px;
+  border-color: #5a7fff;
+  box-shadow: 0 0 10px rgba(90, 127, 255, 0.5);
 }
+
 footer .content {
   display: flex;
   gap: 20px;
 }
+
 footer .content div {
   flex: 1;
 }
+
 footer .content div:nth-child(3) {
   flex: 2;
 }
+
 footer .content div h4 {
   font-weight: 700;
   margin-bottom: 20px;
+  color: #00eaff;
 }
+
 footer .content div ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 footer .content div ul a {
-  color: gray;
+  color: #a0d0ff;
   text-decoration: none;
 }
+
 footer .content div ul a:hover {
-  color: #8570ed;
+  color: #00d4ff;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.7);
   transition: 0.3s;
 }
+
 footer .content div ul li span {
-  color: gray;
+  color: #a0d0ff;
 }
+
 footer .content div ul li span:first-child {
   width: 150px;
   display: inline-block;
@@ -352,9 +475,12 @@ footer .content div:last-child div {
   gap: 12px;
   margin-bottom: 10px;
 }
+
 footer .content div:last-child div svg {
   font-size: 24px;
+  color: #00d4ff;
 }
+
 @media (max-width: 1135px) {
   footer .content {
     flex-wrap: wrap;
@@ -367,6 +493,7 @@ footer .content div:last-child div svg {
     margin-bottom: 30px;
   }
 }
+
 @media (max-width: 900px) {
   footer {
     padding-bottom: 0 !important;
@@ -376,6 +503,7 @@ footer .content div:last-child div svg {
     width: 100%;
   }
 }
+
 @media (max-width: 390px) {
   footer .content div:nth-child(3) ul li {
     display: flex;
@@ -386,11 +514,15 @@ footer .content div:last-child div svg {
 .departments {
   padding-top: 30px;
   padding-bottom: 50px;
+  background: #0a0a1f;
 }
+
 .departments h2 {
-  color: gray;
+  color: #00eaff;
   margin-bottom: 30px;
+  text-shadow: 0 0 15px rgba(0, 212, 255, 0.7);
 }
+
 .card {
   position: relative;
   border-radius: 8px;
@@ -404,7 +536,18 @@ footer .content div:last-child div svg {
   min-height: 360px;
   margin: 0 10px;
   text-decoration: none;
+  background: #111122;
+  border: 1px solid #5a7fff;
+  box-shadow: 0 0 20px rgba(90, 127, 255, 0.4);
+  font-family: "Montserrat", sans-serif;
 }
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 35px rgba(0, 212, 255, 0.7);
+  border-color: #00d4ff;
+}
+
 .card img {
   position: absolute;
   width: 100%;
@@ -412,10 +555,13 @@ footer .content div:last-child div svg {
   z-index: -1;
   top: 0;
   left: 0;
+  object-fit: cover;
+  opacity: 0.6;
 }
+
 .card .depart-name {
   margin-bottom: 30px;
-  background: #e5e5e5;
+  background: rgba(90, 127, 255, 0.3);
   width: 320px;
   font-size: 24px;
   text-transform: uppercase;
@@ -423,12 +569,15 @@ footer .content div:last-child div svg {
   justify-content: center;
   padding: 12px;
   border-radius: 30px;
-  left: 0;
   height: fit-content;
   font-weight: 700;
+  color: #00eaff;
+  border: 1px solid #00d4ff;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.6);
 }
 
 /**********************************************************************************************************************/
+
 nav {
   display: flex;
   width: 100%;
@@ -441,74 +590,99 @@ nav {
   padding-top: 20px !important;
   padding-bottom: 20px !important;
   z-index: 2;
+  background: rgba(13, 13, 26, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(90, 127, 255, 0.5);
 }
+
 nav .logo {
   flex: 1;
   display: flex;
   align-items: center;
   font-size: 2rem;
+  color: #00eaff;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.7);
 }
+
 nav .navLinks {
   flex: 2;
 }
+
 nav .navLinks {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 nav .navLinks .links {
   display: flex;
   gap: 25px;
 }
+
 nav .navLinks .links a {
   text-decoration: none;
-  color: #222;
+  color: #a0d0ff;
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 1.4px;
+  transition: all 0.3s ease;
 }
+
 nav .navLinks .links a:hover {
-  color: #000;
-  transition: 0.3s;
-  cursor: pointer;
+  color: #00d4ff;
+  text-shadow: 0 0 15px rgba(0, 212, 255, 0.9);
 }
+
 nav .btn {
   padding: 8px 20px;
-  color: #e5e5e5;
+  color: #e0e0ff;
   background: transparent;
-  border: none;
+  border: 1px solid #5a7fff;
   border-radius: 20px;
   font-size: 20px;
   font-weight: 600;
   z-index: 2;
+  transition: all 0.3s ease;
 }
-nav .logoutBtn {
-  background: linear-gradient(135deg, black, rgb(49, 49, 49));
-}
+
+nav .logoutBtn,
 nav .loginBtn {
-  background: linear-gradient(135deg, black, rgb(49, 49, 49));
+  background: linear-gradient(135deg, #1a1a3a, #2a2a5a);
+  border: 1px solid #00d4ff;
 }
+
+nav .logoutBtn:hover,
+nav .loginBtn:hover {
+  background: linear-gradient(135deg, #2a2a5a, #3a3a7a);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.7);
+}
+
 nav .hamburger {
   display: none;
 }
+
 nav svg {
   font-size: 1.75rem;
+  color: #00d4ff;
 }
+
 @media (max-width: 1520px) {
   nav {
     min-width: 100%;
     padding: 25px 20px 40px 20px;
   }
 }
+
 @media (max-width: 1100px) {
   nav {
-    background: #ffffffbf;
+    background: rgba(13, 13, 26, 0.95);
     position: fixed;
     top: 0;
     left: 0;
   }
   nav .hamburger {
     display: flex;
+    color: #00d4ff;
   }
   nav .navLinks {
     display: flex;
@@ -521,22 +695,13 @@ nav svg {
     left: 0;
     height: 100%;
     width: 400px;
-    background: #ffffffbf;
+    background: rgba(13, 13, 26, 0.95);
+    backdrop-filter: blur(10px);
     top: 79px;
+    border-right: 1px solid #5a7fff;
   }
   nav .showmenu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 15px 7.5px;
-    z-index: 2;
-    transition: 0.3s;
-    position: fixed;
     left: -100%;
-    width: 400px;
-    height: 100%;
-    background: #ffffffbf;
-    top: 79px;
   }
   nav .navLinks .links {
     flex-direction: column;
@@ -549,11 +714,13 @@ nav svg {
     margin-top: 20px;
   }
 }
+
 @media (max-width: 800px) {
   nav .showmenu {
     width: 96vw;
   }
 }
+
 @media (max-width: 650px) {
   nav .showmenu {
     margin: 0;
@@ -561,29 +728,29 @@ nav svg {
     border-radius: 0;
   }
 }
+
 @media (max-width: 555px) {
   nav {
-    background: #fff;
+    background: #0d0d1a;
   }
   nav .navLinks {
-    background: #fff;
+    background: #0d0d1a;
     width: 100%;
   }
 }
 
-input[type="date"]:before {
-  content: attr(placeholder);
-  color: #444;
-  margin-right: 0.5em;
-}
+input[type="date"]:before,
 input[type="time"]:before {
   content: attr(placeholder);
-  color: #444;
+  color: #a0d0ff;
   margin-right: 0.5em;
 }
-.logo-img{
+
+.logo-img {
   width: 150px;
+  filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.7));
 }
-footer .logo-img{
+
+footer .logo-img {
   width: 100%;
 }
